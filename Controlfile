@@ -1,0 +1,17 @@
+require "socket"
+
+hosts do
+  if Socket.gethostname == "vagrant"
+    use "vagrant"
+  else
+    use "brewmaster", cores: 7
+    use "ethon"
+  end
+end
+
+simulation_basedir = File.open(".simbase").read
+virtualenv = File.open(".virtualenv").read,
+
+simulation PythonEnvironment, File.join(simulation_basedir, "traditional_ggsn.py"),
+  virtualenv: virtualenv
+  interpreter: "pypy"
