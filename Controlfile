@@ -10,8 +10,8 @@ hosts do
 end
 
 simulation_basedir = File.open(".simbase").read
-virtualenv = File.open(".virtualenv").read,
+virtualenv = File.open(".virtualenv").read
 
 simulation PythonEnvironment, File.join(simulation_basedir, "traditional_ggsn.py"),
-  virtualenv: virtualenv
+  virtualenv: virtualenv,
   interpreter: "pypy"
