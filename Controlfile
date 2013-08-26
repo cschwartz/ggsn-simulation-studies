@@ -12,6 +12,6 @@ end
 simulation_basedir = File.open(".simbase").read
 virtualenv = File.open(".virtualenv").read
 
-simulation PythonEnvironment, File.join(simulation_basedir, "traditional_ggsn.py"),
+simulation PythonEnvironment, File.join(simulation_basedir, "simmain.py"),
   virtualenv: virtualenv,
   interpreter: "pypy"
