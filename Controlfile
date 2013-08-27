@@ -4,7 +4,7 @@ hosts do
   if Socket.gethostname == "vagrant"
     use "vagrant"
   else
-    use "brewmaster", cores: 7
+    use "brewmaster", cores: 27
     use "ethon"
   end
 end
