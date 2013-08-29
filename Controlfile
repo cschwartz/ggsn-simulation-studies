@@ -4,8 +4,9 @@ hosts do
   if Socket.gethostname == "vagrant"
     use "vagrant"
   else
-    use "brewmaster", cores: 27
-    use "ethon"
+    use "ggsn-sim-1", cores: 4
+    use "ggsn-sim-2", cores: 4
+    use "ggsn-sim-3", cores: 4
   end
 end
 
