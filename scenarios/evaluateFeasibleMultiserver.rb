@@ -1,6 +1,8 @@
 repetitions 10
 maximumNumberOfTunnels = (0..1000).step(50)
-maximumNumberOfInstances = (10...100).step(10)
+#maximumNumberOfInstances = (10...100).step(10)
+maximumNumberOfInstances = [[100]]
+
 
 maximumNumberOfInstances.each do |currentNumberOfInstances|
 	maximumNumberOfTunnels.each do |currentNumberOfTunnels|
